@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'components-page',
+  templateUrl: './components-page.component.html',
+  styleUrls: ['./components-page.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'angular-material';
+export class ComponentsPageComponent implements OnInit {
   isChecked = true;
 
   colors = [

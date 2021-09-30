@@ -1,0 +1,46 @@
+.flex-root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+  width: 45%;
+
+  h2 {
+    text-decoration: solid;
+  }
+
+  div {
+    padding: 10px;
+    width:20%;
+  }
+}
+
+.container:not(:last-child) {
+  border-bottom: 1px solid black;
+  border-width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .flex-root {
+    flex: 0 1 auto;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+

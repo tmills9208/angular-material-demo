@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <h1 
+    [routerLink]="'/'"
+    [style.cursor]="'pointer'" [style.marginRight]="'4em'"
+    matTooltip="Angular Material Demo"
+    >
+    AMD*
+  </h1>
+  <!-- Not appearing? -->
+  <!-- <mat-divider [vertical]='true'></mat-divider> -->
+  <div>
+    <a mat-button [routerLink]="'/services'">Services</a>
+    <a mat-button [routerLink]="'/pricing'">Pricing</a>
+    <a mat-button [routerLink]="'/events'">Events</a>
+  </div>
+  <span class="example-spacer"></span>
+  <!-- Badges can ONLY appear when they have content, ie. a number.
+    Cant be empty or null or else it hides itself.
+
+    Can we also have empty badges please? just having a colored 
+    circle over something does wonders, with content or not.
+
+    matBadgeColor is too limited, allow us to please use 
+    custom colors similar to style binding. -->
+  <button mat-icon-button 
+  [matBadge]="null"
+  [matBadgeHidden]="false"
+  matBadgePosition="below before"
+  class="hide-text"
+  [matMenuTriggerFor]="profileMenu">
+    <!-- <mat-icon 
+      [style.border]="'2px solid white'"
+      [style.borderColor]="getIconColor()"
+      [style.border-radius]="'100%'"
+      [style.padding]="'.2em'"
+      >
+      person
+    </mat-icon> -->
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu #profileMenu>
+    <dark-mode-toggle></dark-mode-toggle>
+    <button mat-menu-item>Item 1</button>
+    <button mat-menu-item>Item 2</button>
+    <button mat-menu-item [routerLink]="'/components'">Components</button>
+  </mat-menu>
+</mat-toolbar>

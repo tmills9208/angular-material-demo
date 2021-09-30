@@ -1,0 +1,15 @@
+.example-spacer{
+  flex: 1 1 auto;
+}
+
+.mat-badge-content .mat-badge.hide-text {
+  color: transparent;
+}
+
+.container > div {
+  margin-top: 2em;
+  padding: 10px;
+  position: relative;
+  border: 2px solid #555;
+  border-radius: 10px;
+}
